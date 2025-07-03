@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+
+:root {
+  --azul1: rgb(47, 214, 200);
+  --branco: rgb(254, 255, 203);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+#home-btn {
+  position: fixed;
+  background-color: var(--branco);
+  bottom: 25px;
+  right: 25px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--azul1);
+}
+
+#hero {
+  height: 100vh;
+  background-image: url("https://cdn.pixabay.com/photo/2017/05/31/18/38/sea-2361247_1280.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  font-family: "Funnel Display", sans-serif;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  height: 52px;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  color: var(--branco);
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.info {
+  margin: 2rem;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  color: var(--branco);
+  position: absolute;
+  top: 50%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero h2 {
+  color: var(--branco);
+  position: absolute;
+  top: 58%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#action-btn {
+  position: absolute;
+  top: 66%;
+  background-color: var(--azul1);
+  color: rgb(34, 0, 0);
+  padding: 1rem;
+  border-radius: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+#action-btn:active {
+  transform: scale(105%);
+}
+
+/* Sobre */
+
+#sobre {
+  font-family: "Funnel Display", sans-serif;
+  height: auto;
+  background-color: var(--azul1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#sobre h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: var(--branco);
+}
+
+.bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--branco);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.397);
+}
+
+.certificacoes {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  align-self: center;
+  justify-self: center;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificacao {
+  background-color: var(--azul1);
+  height: 100px;
+  border-radius: 12px;
+}
+
+.certificacao:hover {
+  transform: scale(105%);
+}
+
+/* cursos */
+
+#cursos {
+  font-family: "Funnel Display", sans-serif;
+  background-color: var(--azul1);
+  color: var(--branco);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#cursos img {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+}
+
+#cursos h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#cursos h3 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  border-bottom: solid 1px;
+  padding-bottom: 0.5rem;
+}
+
+#cursos p {
+  padding: 1rem;
+}
+
+#cursos a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--azul1);
+  background-color: var(--branco);
+  padding: 0.5rem 1rem;
+  border-radius: 24px;
+}
+
+.botao {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Saidas */
+
+#saidas {
+  font-family: "Funnel Display", sans-serif;
+  background-color: var(--azul1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#saidas h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--branco);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.paraty,
+.ilha-grande {
+  position: relative;
+  width: 80vw;
+}
+
+#saidas img {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.397);
+  width: 100%;
+  border-radius: 12px;
+}
+
+#saidas .paraty p,
+#saidas .ilha-grande p {
+  position: absolute; /* Faz o texto ficar sobre a imagem */
+  bottom: 10%; /* Ajuste o valor para a posição desejada */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza o texto */
+  color: var(--branco); /* Cor do texto */
+  font-size: 2rem; /* Tamanho do texto */
+  font-weight: bold; /* Negrito */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para melhorar a legibilidade */
+}
+
+/* Contatos */
+
+#contatos {
+    padding-top: 2rem;
+  background-color: var(--azul1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contatos h2 {
+  color: var(--branco);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+  font-family: "Funnel Display", sans-serif;
+}
+
+.icones a i {
+  font-size: 64px;
+  color: var(--branco)
+}
+
+.icones a:active i {
+    transform: scale(110%);
+}
+
+.icones {
+    margin-top: 2rem;
+  display: flex;
+  gap: 4rem;
+    padding-bottom: 2rem;
+}

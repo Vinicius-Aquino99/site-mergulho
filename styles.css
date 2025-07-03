@@ -86,7 +86,7 @@ header nav ul li a {
   position: absolute;
   top: 66%;
   background-color: var(--azul1);
-  color: rgb(34, 0, 0);
+  color: var(--branco);
   padding: 1rem;
   border-radius: 16px;
   font-weight: 800;

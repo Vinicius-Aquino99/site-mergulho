@@ -31,7 +31,11 @@
   background-color: var(--branco);
   bottom: 40px;
   right: 40px;
-  padding: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   text-decoration: none;
   color: var(--azul1);
@@ -57,15 +61,38 @@
   font-family: "Funnel Display", sans-serif;
 }
 
-.menu-btn {
-  font-size: 2rem;
-  background: none;
-  border: none;
+.menu-toggle {
+  width: 30px;
+  height: 25px;
   cursor: pointer;
-  padding: 1rem;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-toggle span {
+  height: 4px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Efeito quando está aberto */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(7.5px, 7.5px);
+  transform-origin: center;
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7.5px, -7.5px);
+  transform-origin: center;
 }
 
 .menu {
@@ -295,6 +322,7 @@
   position: relative;
   width: 80vw;
   transition: all 1s ease;
+  text-align: center;
 }
 
 #saidas img {

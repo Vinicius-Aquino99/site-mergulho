@@ -3,11 +3,13 @@ const menu = document.getElementById('menu');
 const homeBtn = document.getElementById('home-btn');
 
 toggleBtn.addEventListener('click', () => {
+  toggleBtn.classList.toggle('open')
   menu.classList.toggle('active');
 });
 
 document.querySelectorAll('#menu a').forEach(link => {
   link.addEventListener('click', () => {
+    toggleBtn.classList.toggle('open')
     menu.classList.remove('active');
   });
 });

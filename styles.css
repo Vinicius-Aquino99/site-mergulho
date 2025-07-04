@@ -18,8 +18,8 @@
 #home-btn {
   position: fixed;
   background-color: var(--branco);
-  bottom: 25px;
-  right: 25px;
+  bottom: 40px;
+  right: 40px;
   padding: 15px;
   border-radius: 50%;
   text-decoration: none;
@@ -39,28 +39,54 @@
   font-family: "Funnel Display", sans-serif;
 }
 
-header nav {
-  display: flex;
-  justify-content: center;
-  height: 52px;
-  align-items: center;
-  backdrop-filter: blur(20px);
+.menu-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
   position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
+  top: 10px;
+  right: 10px;
 }
 
-header nav ul {
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 1rem;
+  background-color: var(--azul1);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu-btn.active {
+  display: none;
+}
+
+.menu ul {
   display: flex;
-  list-style: none;
+  flex-direction: column;
   gap: 1rem;
-  color: var(--branco);
+  list-style: none;
+  padding: 0;
 }
 
-header nav ul li a {
+.menu ul li a {
+  color: var(--branco);
   text-decoration: none;
-  color: inherit;
+  font-weight: bold;
+}
+
+.menu ul li a:hover {
+  text-decoration: underline;
 }
 
 .info {
@@ -118,31 +144,59 @@ header nav ul li a {
 .bloco {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  background-color: var(--branco);
   padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.397);
+  box-shadow: 0px 0px 10px rgba(5, 0, 26, 0.664);
+  color: var(--branco);
 }
 
 .certificacoes {
-  display: grid;
-  grid-template-columns: 150px 150px;
-  align-self: center;
-  justify-self: center;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 1rem;  
+}
+
+.open-water {
+  background-image: url('https://www.wediveoceania.com/static/uploads/images/200001c-wfqsvqddznbo.JPG?mode=max&upscale=false&width=2200&height=2200'
+  );
+  background-size: cover;
+}
+
+.rescue {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUzT2W9M1LvcGGmGYJwuA3dypip2RaIWhr9A&s');
+  background-size: cover;
+}
+
+.divemaster {
+  background-image: url('https://tdisdi.asia/wp-content/uploads/2020/03/DM-card.jpg');
+  background-size: cover;
+}
+
+.avancado {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQshTJAjYev181Pt7v9TYSGyw2RTNOQZMV3OA&s');
+  background-size: cover;
+}
+
+.certificacoes::-webkit-scrollbar {
+  height: 8px;
+}
+
+.certificacoes::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .certificacao {
-  background-color: var(--azul1);
-  height: 100px;
+  min-width: 230px;
+  height: 150px;
+  flex-shrink: 0;
   border-radius: 12px;
-}
-
-.certificacao:hover {
-  transform: scale(105%);
+  background-color: blue;
+  scroll-behavior: smooth;
 }
 
 /* cursos */
@@ -240,7 +294,7 @@ header nav ul li a {
 /* Contatos */
 
 #contatos {
-    padding-top: 2rem;
+  padding-top: 2rem;
   background-color: var(--azul1);
   display: flex;
   flex-direction: column;
@@ -257,16 +311,18 @@ header nav ul li a {
 
 .icones a i {
   font-size: 64px;
-  color: var(--branco)
+  color: var(--branco);
 }
 
 .icones a:active i {
-    transform: scale(110%);
+  transform: scale(110%);
+  color: white;
 }
 
 .icones {
-    margin-top: 2rem;
+  margin-top: 2rem;
   display: flex;
   gap: 4rem;
-    padding-bottom: 2rem;
+  padding-bottom: 10rem;
+
 }
